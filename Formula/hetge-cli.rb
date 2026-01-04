@@ -1,7 +1,10 @@
+require_relative "../lib/github_npm_download_strategy"
+
 class HetgeCli < Formula
   desc "Unified CLI for hetGE projects - env management, Docker builds, and Dokploy deployments"
   homepage "https://github.com/hetGE/hetge-cli"
-  url "https://npm.pkg.github.com/@hetge/cli/-/cli-0.1.3.tgz"
+  url "https://npm.pkg.github.com/@hetge/cli/-/cli-0.1.3.tgz",
+      using: GitHubNpmDownloadStrategy
   sha256 "f2ef6b267003c8bdfe332eedbe6e03001f7c477d97a7646668933b317bf7d12a"
   license "PROPRIETARY"
 
