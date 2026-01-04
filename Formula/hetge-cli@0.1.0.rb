@@ -1,4 +1,4 @@
-class HetgeCli < Formula
+class HetgeCliAT010 < Formula
   desc "Unified CLI for hetGE projects - env management, Docker builds, and Dokploy deployments"
   homepage "https://github.com/hetGE/hetge-cli"
   url "https://npm.pkg.github.com/@hetge/cli/-/cli-0.1.0.tgz"
