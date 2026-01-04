@@ -1,3 +1,5 @@
+require "download_strategy"
+
 class HetgeCli < Formula
   desc "Unified CLI for hetGE projects - env management, Docker builds, and Dokploy deployments"
   homepage "https://github.com/hetGE/hetge-cli"
