@@ -5,7 +5,7 @@ Homebrew tap for hetGE tools.
 ## Installation
 
 ```bash
-export HOMEBREW_GITHUB_PACKAGES_TOKEN=$(gh auth token)
+export HOMEBREW_GITHUB_PACKAGES_AUTH="Bearer $(gh auth token)"
 brew install hetge/tap/hetge-cli
 ```
 
