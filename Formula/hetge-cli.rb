@@ -1,19 +1,9 @@
-class GitHubPackagesDownloadStrategy < CurlDownloadStrategy
-  def _curl_opts
-    token = ENV["HOMEBREW_GITHUB_API_TOKEN"]
-    if token.nil? || token.empty?
-      odie "HOMEBREW_GITHUB_API_TOKEN required. Run: export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)"
-    end
-    super + ["--header", "Authorization: Bearer #{token}"]
-  end
-end
-
 class HetgeCli < Formula
   desc "Unified CLI for hetGE projects - env management, Docker builds, and Dokploy deployments"
   homepage "https://github.com/hetGE/hetge-cli"
-  url "https://npm.pkg.github.com/@hetge/cli/-/cli-0.1.3.tgz",
-      using: GitHubPackagesDownloadStrategy
-  sha256 "f2ef6b267003c8bdfe332eedbe6e03001f7c477d97a7646668933b317bf7d12a"
+  url "https://github.com/hetGE/hetge-cli/releases/download/v0.1.3/hetge-cli.tgz",
+      using: :github_private_release
+  sha256 "9cdd7a2dcbe4462691a27d7d6bbf84f149242bca40f5291f0a6e049b1d50391e"
   license "PROPRIETARY"
 
   depends_on "node"
@@ -25,13 +15,7 @@ class HetgeCli < Formula
 
   def caveats
     <<~EOS
-      hetge-cli requires GitHub Packages authentication and other tools.
-
-      1. Configure npm for GitHub Packages:
-        pnpm config set -g @hetge:registry https://npm.pkg.github.com
-        pnpm config set -g //npm.pkg.github.com/:_authToken "$(gh auth token)"
-
-      2. Install required tools:
+      hetge-cli requires these tools:
         brew install gh 1password-cli tolgamorf/tap/env2op-cli
     EOS
   end
