@@ -1,6 +1,9 @@
 class GitHubPackagesDownloadStrategy < CurlDownloadStrategy
   def _curl_opts
-    token = ENV["HOMEBREW_GITHUB_API_TOKEN"] || `gh auth token`.strip
+    token = ENV["HOMEBREW_GITHUB_API_TOKEN"]
+    if token.nil? || token.empty?
+      odie "HOMEBREW_GITHUB_API_TOKEN required. Run: export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)"
+    end
     super + ["--header", "Authorization: Bearer #{token}"]
   end
 end
