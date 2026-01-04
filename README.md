@@ -1,19 +1,11 @@
 # hetGE Homebrew Tap
 
-Private Homebrew tap for hetGE tools.
-
-## Prerequisites
-
-Before installing, configure npm for GitHub Packages:
-
-```bash
-pnpm config set -g @hetge:registry https://npm.pkg.github.com
-pnpm config set -g //npm.pkg.github.com/:_authToken "$(gh auth token)"
-```
+Homebrew tap for hetGE tools.
 
 ## Installation
 
 ```bash
+export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
 brew install hetge/tap/hetge-cli
 ```
 
