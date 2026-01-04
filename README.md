@@ -19,9 +19,9 @@ brew install hetge/tap/hetge-cli
 
 ## Available Formulas
 
-| Formula | Description |
-|---------|-------------|
-| `hetge-cli` | Unified CLI for hetGE projects - env management, Docker builds, and Dokploy deployments |
+| Formula                                           | Description                                                                             |
+|---------------------------------------------------|-----------------------------------------------------------------------------------------|
+| [`hetge-cli`](https://github.com/hetGE/hetge-cli) | Unified CLI for hetGE projects - env management, Docker builds, and Dokploy deployments |
 
 ## Requirements
 
