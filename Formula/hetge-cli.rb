@@ -1,8 +1,8 @@
 class HetgeCli < Formula
   desc "Unified CLI for hetGE projects - env management, Docker builds, and Dokploy deployments"
   homepage "https://github.com/hetGE/hetge-cli"
-  url "https://npm.pkg.github.com/@hetge/cli/-/cli-0.1.1.tgz"
-  sha256 "6c81152c01f107f92c7fff57053eb859c0680e57f2eb4b16082bc6c123236350"
+  url "https://npm.pkg.github.com/@hetge/cli/-/cli-0.1.3.tgz"
+  sha256 "f2ef6b267003c8bdfe332eedbe6e03001f7c477d97a7646668933b317bf7d12a"
   license "PROPRIETARY"
 
   depends_on "node"
