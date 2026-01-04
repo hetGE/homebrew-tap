@@ -14,11 +14,7 @@ pnpm config set -g //npm.pkg.github.com/:_authToken "$(gh auth token)"
 ## Installation
 
 ```bash
-# Add the tap (requires GitHub access)
-brew tap hetge/tap git@github.com:hetGE/homebrew-tap.git
-
-# Install hetge-cli
-brew install hetge-cli
+brew install hetge/tap/hetge-cli
 ```
 
 ## Available Formulas
